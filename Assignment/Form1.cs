@@ -21,6 +21,10 @@ namespace Assignment
         {
             if (comboBox1.SelectedIndex == 0)
             {
+                r3value.Text = "";
+                r4value.Text = "";
+                r5value.Text = "";
+
                 r3value.Hide();
                 r3lbl.Hide();
                 r4value.Hide();
@@ -30,6 +34,9 @@ namespace Assignment
             }
             else if (comboBox1.SelectedIndex == 1)
             {
+                r4value.Text = "";
+                r5value.Text = "";
+
                 r3value.Show();
                 r3lbl.Show();
 
