@@ -103,5 +103,116 @@ namespace Assignment
             double R = R1 + R2 + R3 + R4 + R5;
             seriesans.Text = "Answer = " + R;
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            {
+                if (comboBox2.SelectedIndex == 0)
+                {
+                    r3box.Text = "";
+                    r4box.Text = "";
+                    r5box.Text = "";
+
+                    r3box.Hide();
+                    p3lbl.Hide();
+                    r4box.Hide();
+                    p4lbl.Hide();
+                    r5box.Hide();
+                    p5lbl.Hide();
+                }
+                else if (comboBox2.SelectedIndex == 1)
+                {
+                    r4box.Text = "";
+                    r5box.Text = "";
+
+                    r3box.Show();
+                    p3lbl.Show();
+
+                    r4box.Hide();
+                    p4lbl.Hide();
+
+                    r5box.Hide();
+                    p5lbl.Hide();
+                }
+                else if (comboBox2.SelectedIndex == 2)
+                {
+                    r3box.Show();
+                    p3lbl.Show();
+
+                    r4box.Show();
+                    p4lbl.Show();
+
+                    r5box.Hide();
+                    p5lbl.Hide();
+                }
+                else if (comboBox2.SelectedIndex == 3)
+                {
+                    r3box.Show();
+                    p3lbl.Show();
+
+                    r4box.Show();
+                    p4lbl.Show();
+
+                    r5box.Show();
+                    p5lbl.Show();
+                }
+            }
+        }
+
+        private void calculatebtn_Click(object sender, EventArgs e)
+        {
+            double p1, p2, p3, p4, p5;
+            double rrt=0;
+            try
+            {
+                p1 = Convert.ToDouble(r1box.Text);
+                rrt = rrt + 1.0 / p1;
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                p2 = Convert.ToDouble(r2box.Text);
+                rrt = rrt + 1.0 / p2;
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                p3 = Convert.ToDouble(r3box.Text);
+                rrt = rrt + 1.0/p3;
+            }
+            catch
+            {
+                
+            }
+
+
+            try
+            {
+                p4 = Convert.ToDouble(r4box.Text);
+                rrt = rrt + 1.0 / p4;
+            }
+            catch
+            {
+                
+            }
+            try
+            {
+                p5 = Convert.ToDouble(r5box.Text);
+                rrt = rrt + 1.0 / p5;
+            }
+            catch
+            {
+                
+            }
+
+            double p = 1.0/rrt;
+            answerlbl.Text = "Answer = " + p;
+        }
     }
 }
