@@ -16,7 +16,7 @@ namespace Assignment
         {
             InitializeComponent();
         }
-
+        //combobox for series.
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
@@ -69,7 +69,7 @@ namespace Assignment
                 r5value.Show();
             }
         }
-
+        //calculations and button press for series
         private void button1_Click(object sender, EventArgs e)
         {
             double R1, R2, R3, R4, R5;
@@ -97,13 +97,27 @@ namespace Assignment
             {
                 R5 = 0;
             }
-            R1 = Convert.ToDouble(r1value.Text);
-            R2 = Convert.ToDouble(r2value.Text);
+            try
+            {
+                R1 = Convert.ToDouble(r1value.Text);
+            }
+            catch
+            {
+                R1 = 0;
+            }
+            try
+            {
+                R2 = Convert.ToDouble(r2value.Text);
+            }
+            catch
+            {
+                R2 = 0;
+            }
 
             double R = R1 + R2 + R3 + R4 + R5;
             seriesans.Text = "Answer = " + R;
         }
-
+        //combobox for parallel
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             {
@@ -158,7 +172,7 @@ namespace Assignment
                 }
             }
         }
-
+        //calculations and button press for paralell
         private void calculatebtn_Click(object sender, EventArgs e)
         {
             double p1, p2, p3, p4, p5;
